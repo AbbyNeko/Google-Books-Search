@@ -11,38 +11,46 @@ function SearchBooks() {
   // search job postings
   function searchBooks(keyword) {
     API.searchBooks(keyword)
-      .then(res => setResults(res))
+      .then(res => setResults(res.data))
       .catch(err => console.log(err));
   }
 
   // When the form is submitted, use the API.saveBook method to save the book data
   // Then reload books from the database
-  function handleFormSubmit() {
+  function handleFormSubmit(event) {
+
+      event.preventDefault();
+
       searchBooks(searchKeyword.current.value);
   }
 
-    return (
-        <div class="container">
+  console.log(`results - ${JSON.stringify(bookResults)}`);
 
-            <div class="row">
+  const listedResults = bookResults.map((result) => 
+    <BookResult bookData={result.volumeInfo}/>
+  );
+
+    return (
+        <div className="container">
+
+            <div className="row">
               <h1>Search Google Books</h1>
 
-              <form onSubmit={() => handleFormSubmit()}>
+              <form onSubmit={handleFormSubmit}>
 
                   <input 
+                    className="search-bar"
                     type="text"
                     placeholder="Search book title, author, etc."
                     ref={searchKeyword}
                   />
-                  <input type="submit" class="btn" value="Search Books"/>
+                  <input type="submit" className="btn btn-primary" value="Search Books"/>
 
               </form>
 
               <div className="results">
 
-                {bookResults.map(result => 
-                  <BookResult bookData={result}/>
-                )}
+                {listedResults}
 
               </div>
                 

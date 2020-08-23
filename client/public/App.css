@@ -7,10 +7,27 @@
   pointer-events: none;
 }
 
+form {
+  display: inline-block;
+  margin-top:10em;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
+}
+
+.search-bar {
+  width:20em !important;
+}
+
+h1 {
+  margin-top:1em;
+}
+
+.btn {
+  margin-left: 1em;
 }
 
 .App-header {

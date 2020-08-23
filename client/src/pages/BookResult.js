@@ -19,9 +19,9 @@ function BookResults({bookData}) {
 
     return (
             <div className="result">
-                <img href={bookData.image} alt={bookData.title}/>
-                <h1><a href={bookData.link}>{bookData.title}</a></h1>
-                <h3>Author: {bookData.author}</h3>
+                <img src={bookData.imageLinks.smallThumbnail} alt={bookData.title}/>
+                <h1><a href={bookData.infoLink}>{bookData.title}</a></h1>
+                <h3>Author: {bookData.authors.map(author => author+" ")}</h3>
                 <p>{bookData.description}</p>
                 <button onClick={() => saveBook(bookData)}>Save Book</button>
             </div>
