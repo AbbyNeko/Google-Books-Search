@@ -14,7 +14,7 @@ function Nav() {
       </li>
 
       <li className="nav-item">
-      <a className="navbar-brand saved-books" href="/savedbooks"> 
+      <a className="navbar-brand saved-books" href="/Google-Books-Search/savedbooks"> 
         Saved Books
       </a>
       </li>
