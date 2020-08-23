@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "68778de45ec303177bd9b6598773e333",
+    "revision": "e7c149ff86eac7921268a181e64b94c7",
     "url": "/Google-Books-Search/index.html"
   },
   {
-    "revision": "1a6dbc9c61c4e4f9a1f8",
+    "revision": "b515ac87d0dccbba5c3b",
     "url": "/Google-Books-Search/static/css/main.5ecd60fb.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Google-Books-Search/static/js/2.6e59459b.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "1a6dbc9c61c4e4f9a1f8",
-    "url": "/Google-Books-Search/static/js/main.983baf40.chunk.js"
+    "revision": "b515ac87d0dccbba5c3b",
+    "url": "/Google-Books-Search/static/js/main.befebf44.chunk.js"
   },
   {
     "revision": "d6a307a42251f2671575",

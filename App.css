@@ -22,12 +22,25 @@ form {
   width:20em !important;
 }
 
-h1 {
+.title {
   margin-top:1em;
 }
 
 .btn {
   margin-left: 1em;
+}
+
+.result {
+  margin-top:3em;
+  margin-bottom:3em;
+}
+
+.saved-books-list {
+  margin-top:2em;
+}
+
+.view-btn {
+  margin-left:2em;
 }
 
 .App-header {
