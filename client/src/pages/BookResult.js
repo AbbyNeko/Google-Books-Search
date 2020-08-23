@@ -20,19 +20,31 @@ import API from "../utils/API";
 
 function BookResults({bookData}) {
 
-  const authorsListed = bookData.authors.map((author, index) => { 
-      if(index > 0) { 
-          return ', '+author; 
-      } else { 
-          return author; 
-      }
-  });
+  let authorsListed = '';
+
+  if(bookData.authors) {
+
+        authorsListed = bookData.authors.map((author, index) => { 
+          if(index > 0) { 
+              return ', '+author; 
+          } else { 
+              return author; 
+          }
+        });
+
+  } 
+
+  let imgLink = bookData.imageLinks;
+
+  if(imgLink !== undefined) {
+    imgLink = imgLink.smallThumbnail;
+  }
 
     return (
             <div className="result row">
 
               <div className="book-img col-2">
-                  <img src={bookData.imageLinks.smallThumbnail} alt={bookData.title}/>
+                  <img src={imgLink || "https://via.placeholder.com/100x150"} alt={bookData.title}/>
               </div>
 
               <div className="book-info col-9">
