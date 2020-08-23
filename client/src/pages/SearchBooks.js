@@ -1,31 +1,23 @@
 import React, { useState, useRef } from "react"
 import API from "../utils/API";
-import { Link } from "react-router-dom";
+import BookResult from "./BookResult";
 
 function SearchBooks() {
   // Setting our component's initial state
   const [bookResults, setResults] = useState([])
-  const [formObject, setFormObject] = useState({})
 
   const searchKeyword = useRef();
 
   // search job postings
   function searchBooks(keyword) {
     API.searchBooks(keyword)
-      .then(res => loadBooks())
+      .then(res => setResults(res))
       .catch(err => console.log(err));
   }
 
-  // Handles updating component state when the user types into the input field
-  function handleInputChange(event) {
-    const { name, value } = event.target;
-    setFormObject({...formObject, [name]: value})
-  };
-
   // When the form is submitted, use the API.saveBook method to save the book data
   // Then reload books from the database
-  function handleFormSubmit(event) {
-      event.preventDefault();
+  function handleFormSubmit() {
       searchBooks(searchKeyword.current.value);
   }
 
@@ -35,7 +27,7 @@ function SearchBooks() {
             <div class="row">
               <h1>Search Google Books</h1>
 
-              <form onSubmit={() => handleFormSubmit(event)}>
+              <form onSubmit={() => handleFormSubmit()}>
 
                   <input 
                     type="text"
@@ -45,6 +37,14 @@ function SearchBooks() {
                   <input type="submit" class="btn" value="Search Books"/>
 
               </form>
+
+              <div className="results">
+
+                {bookResults.map(result => 
+                  <BookResult bookData={result}/>
+                )}
+
+              </div>
                 
             </div>
 
@@ -53,4 +53,4 @@ function SearchBooks() {
   }
 
 
-export default Books;
+export default SearchBooks;

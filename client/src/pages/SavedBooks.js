@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react"
 import API from "../utils/API";
-import { Link } from "react-router-dom";
 
-function Books() {
+function SavedBooks() {
   // Setting our component's initial state
   const [books, setBooks] = useState([])
 
@@ -27,14 +26,16 @@ function Books() {
       .catch(err => console.log(err));
   }
 
+  const savedBooksList = books.map(book => 
+    <li>{book.title} <a class="view-btn" href={book.link}>View</a> <button className="delete-btn" onClick={() => deleteBook(book._id)}>Delete</button></li>
+  );
+
     return (
         <div class="container">
             <div class="row">
                 <h1>Saved Books</h1>
                 <ul>
-                    {books.map((book) => {
-                        <li>{book.title} <a class="view-btn" href={book.link}>View</a> <button className="delete-btn" onClick={() => deleteBook(book._id)}>Delete</button></li>
-                    })}
+                    {savedBooksList}
                 </ul>
             </div>
         </div>
@@ -42,4 +43,4 @@ function Books() {
   }
 
 
-export default Books;
+export default SavedBooks;

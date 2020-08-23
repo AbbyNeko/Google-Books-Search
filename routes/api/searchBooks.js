@@ -3,7 +3,7 @@ const axios = require("axios");
 
 // Matches with "/searchBooks/:keywords"
 router.route("/:keywords")
-  .get(getGoogleBooks(req, res, next))
+  .get(getGoogleBooks)
 
 
 //searching for books based on keyword using Google books API
