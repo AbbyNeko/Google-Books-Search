@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "### Overview",
   "main": "server.js",
+  "engines": {
+    "node": "12.8.0"
+  },
   "scripts": {
     "test": "react-scripts test",
     "start": "react-scripts start",
