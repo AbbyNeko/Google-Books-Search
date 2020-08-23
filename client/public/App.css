@@ -22,12 +22,17 @@ form {
   width:20em !important;
 }
 
-h1 {
+.title {
   margin-top:1em;
 }
 
 .btn {
   margin-left: 1em;
+}
+
+.result {
+  margin-top:3em;
+  margin-bottom:3em;
 }
 
 .App-header {

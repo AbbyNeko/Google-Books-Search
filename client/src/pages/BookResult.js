@@ -17,13 +17,28 @@ import API from "../utils/API";
 
 function BookResults({bookData}) {
 
+  const authorsListed = bookData.authors.map((author, index) => { 
+      if(index > 0) { 
+          return ', '+author; 
+      } else { 
+          return author; 
+      }
+  });
+
     return (
-            <div className="result">
-                <img src={bookData.imageLinks.smallThumbnail} alt={bookData.title}/>
-                <h1><a href={bookData.infoLink}>{bookData.title}</a></h1>
-                <h3>Author: {bookData.authors.map(author => author+" ")}</h3>
-                <p>{bookData.description}</p>
-                <button onClick={() => saveBook(bookData)}>Save Book</button>
+            <div className="result row">
+
+              <div className="book-img col-2">
+                  <img src={bookData.imageLinks.smallThumbnail} alt={bookData.title}/>
+              </div>
+
+              <div className="book-info col-9">
+                  <h1><a href={bookData.infoLink} target="_blank" rel="noopener noreferrer">{bookData.title}</a></h1>
+                  <h3>Author: {authorsListed}</h3>
+                  <p>{bookData.description}</p>
+                  <button className="btn btn-primary" onClick={() => saveBook(bookData)}>Save Book</button>
+              </div>
+
             </div>
     );
   }

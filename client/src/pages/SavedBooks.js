@@ -33,7 +33,7 @@ function SavedBooks() {
     return (
         <div class="container">
             <div class="row">
-                <h1>Saved Books</h1>
+                <h1 className="title">Saved Books</h1>
                 <ul>
                     {savedBooksList}
                 </ul>

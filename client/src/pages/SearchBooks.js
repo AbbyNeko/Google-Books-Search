@@ -24,17 +24,17 @@ function SearchBooks() {
       searchBooks(searchKeyword.current.value);
   }
 
-  console.log(`results - ${JSON.stringify(bookResults)}`);
+  //console.log(`results - ${JSON.stringify(bookResults)}`);
 
-  const listedResults = bookResults.map((result) => 
-    <BookResult bookData={result.volumeInfo}/>
+  const listedResults = bookResults.map((result, index) => 
+    <BookResult bookData={result.volumeInfo} key={index}/>
   );
 
     return (
         <div className="container">
 
             <div className="row">
-              <h1>Search Google Books</h1>
+              <h1 className="title">Search Google Books</h1>
 
               <form onSubmit={handleFormSubmit}>
 
