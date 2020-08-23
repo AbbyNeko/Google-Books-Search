@@ -4,15 +4,18 @@ import API from "../utils/API";
   // When the form is submitted, use the API.saveBook method to save the book data
   // Then reload books from the database
   function saveBook(bookData) {
-    if (bookData.title && bookData.author) {
-      API.saveBook({
+
+    console.log(`book data - ${JSON.stringify(bookData)}`)
+
+    API.saveBook({
         title: bookData.title,
-        author: bookData.author,
-        synopsis: bookData.description
+        author: bookData.authors[0],
+        synopsis: bookData.description,
+        link: bookData.infoLink
       })
         .then(res => console.log('saved'))
         .catch(err => console.log(err));
-    }
+        
   };
 
 function BookResults({bookData}) {
@@ -38,8 +41,9 @@ function BookResults({bookData}) {
                   <p>{bookData.description}</p>
                   <button className="btn btn-primary" onClick={() => saveBook(bookData)}>Save Book</button>
               </div>
-
+              
             </div>
+
     );
   }
 

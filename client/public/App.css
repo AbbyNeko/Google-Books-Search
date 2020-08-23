@@ -35,6 +35,14 @@ form {
   margin-bottom:3em;
 }
 
+.saved-books-list {
+  margin-top:2em;
+}
+
+.view-btn {
+  margin-left:2em;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

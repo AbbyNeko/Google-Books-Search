@@ -26,17 +26,22 @@ function SavedBooks() {
       .catch(err => console.log(err));
   }
 
-  const savedBooksList = books.map(book => 
-    <li>{book.title} <a class="view-btn" href={book.link}>View</a> <button className="delete-btn" onClick={() => deleteBook(book._id)}>Delete</button></li>
+  const savedBooksList = books.map((book, index) => 
+    <li key={index}>{book.title}<a className="view-btn" href={book.link} target="_blank">View</a> <button className="delete-btn btn btn-danger" onClick={() => deleteBook(book._id)}>Delete</button></li>
   );
 
     return (
-        <div class="container">
-            <div class="row">
-                <h1 className="title">Saved Books</h1>
-                <ul>
-                    {savedBooksList}
-                </ul>
+        <div className="container">
+            <div className="row">
+                <div className="col-12">
+                    <h1 className="title">Saved Books</h1>
+                </div>
+
+                <div className="col-12 saved-books-list">
+                    <ul>
+                        {savedBooksList}
+                    </ul>
+                </div>
             </div>
         </div>
     );
