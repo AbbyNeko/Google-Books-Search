@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/AbbyNeko/Google-Books-Search/static/css/main.5ecd60fb.chunk.css",
+    "main.js": "/AbbyNeko/Google-Books-Search/static/js/main.463b913c.chunk.js",
+    "main.js.map": "/AbbyNeko/Google-Books-Search/static/js/main.463b913c.chunk.js.map",
+    "runtime-main.js": "/AbbyNeko/Google-Books-Search/static/js/runtime-main.ead52675.js",
+    "runtime-main.js.map": "/AbbyNeko/Google-Books-Search/static/js/runtime-main.ead52675.js.map",
+    "static/js/2.6e59459b.chunk.js": "/AbbyNeko/Google-Books-Search/static/js/2.6e59459b.chunk.js",
+    "static/js/2.6e59459b.chunk.js.map": "/AbbyNeko/Google-Books-Search/static/js/2.6e59459b.chunk.js.map",
+    "index.html": "/AbbyNeko/Google-Books-Search/index.html",
+    "precache-manifest.9b78777fa00cfa3104c49b539ffdbc5b.js": "/AbbyNeko/Google-Books-Search/precache-manifest.9b78777fa00cfa3104c49b539ffdbc5b.js",
+    "service-worker.js": "/AbbyNeko/Google-Books-Search/service-worker.js",
+    "static/css/main.5ecd60fb.chunk.css.map": "/AbbyNeko/Google-Books-Search/static/css/main.5ecd60fb.chunk.css.map",
+    "static/js/2.6e59459b.chunk.js.LICENSE.txt": "/AbbyNeko/Google-Books-Search/static/js/2.6e59459b.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ead52675.js",
+    "static/js/2.6e59459b.chunk.js",
+    "static/css/main.5ecd60fb.chunk.css",
+    "static/js/main.463b913c.chunk.js"
+  ]
+}
