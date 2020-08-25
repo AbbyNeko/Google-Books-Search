@@ -1,7 +1,6 @@
 {
   "name": "client",
   "version": "0.1.0",
-  "homepage": "https://abbyneko.github.io/Google-Books-Search",
   "private": true,
   "proxy": "http://localhost:3001/",
   "dependencies": {

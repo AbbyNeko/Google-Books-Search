@@ -8,13 +8,13 @@ function Nav() {
       <ul className="navbar-nav mr-auto">
 
       <li className="nav-item">
-      <a className="navbar-brand" href="/Google-Books-Search">
+      <a className="navbar-brand" href="/">
         Search Books
       </a>
       </li>
 
       <li className="nav-item">
-      <a className="navbar-brand saved-books" href="/Google-Books-Search/savedbooks"> 
+      <a className="navbar-brand saved-books" href="/savedbooks"> 
         Saved Books
       </a>
       </li>

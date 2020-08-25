@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "### Overview",
   "main": "server.js",
-  "engines": {
-    "node": "12.8.0"
-  },
   "scripts": {
     "test": "react-scripts test",
     "start": "react-scripts start",
@@ -23,7 +20,7 @@
   "bugs": {
     "url": "https://github.com/AbbyNeko/Google-Books-Search/issues"
   },
-  "homepage": "https://abbyneko.github.io/Google-Books-Search",
+  "homepage": "https://github.com/AbbyNeko/Google-Books-Search#readme",
   "dependencies": {
     "axios": "^0.19.2",
     "express": "^4.17.1",
