@@ -14,7 +14,7 @@ function App() {
           <Route exact path={["/"]}>
             <SearchBooks />
           </Route>
-          <Route exact path="//savedbooks">
+          <Route exact path="/savedbooks">
             <SavedBooks />
           </Route>
         </Switch>
