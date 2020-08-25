@@ -13,6 +13,9 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3"
   },
+  "engines": {
+    "node": "12.8.0"
+  },
   "scripts": {
     "test": "react-scripts test",
     "start": "react-scripts start",
