@@ -3,7 +3,7 @@ const path = require("path");
 const routes = require("./routes");
 const mongoose = require("mongoose");
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3002;
 const app = express();
 
 // Define middleware here
@@ -24,7 +24,7 @@ app.get("*", (req, res) => {
 });
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://googlebooks:password1!@ds351455.mlab.com:51455/heroku_nmjrqhmt");
+mongoose.connect(process.env.MONGODB_URI || "mongodb+srv://heroku_nmjrqhmt:fhvagSJEwdQZtXBY@cluster-nmjrqhmt.qqpt2.mongodb.net/books");
 
 
 app.listen(PORT, () => {
