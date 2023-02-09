@@ -27,6 +27,7 @@ app.get("*", (req, res) => {
 
 
 db.once('open', () => {
+  console.log('mongodb connected');
   app.listen(PORT, () => {
     console.log(`API server running on port ${PORT}!`);
   });
