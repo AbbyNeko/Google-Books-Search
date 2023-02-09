@@ -2,6 +2,7 @@ const express = require("express");
 const path = require("path");
 const routes = require("./routes");
 const mongoose = require("mongoose");
+const db = require('./config/connection')
 
 const PORT = process.env.PORT || 3002;
 const app = express();
@@ -23,10 +24,10 @@ app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
 
-// Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb+srv://heroku_nmjrqhmt:fhvagSJEwdQZtXBY@cluster-nmjrqhmt.qqpt2.mongodb.net/books");
 
-
-app.listen(PORT, () => {
-  console.log(`🌎 ==> API server now on port ${PORT}!`);
+db.once('open', () => {
+  app.listen(PORT, () => {
+    console.log(`API server running on port ${PORT}!`);
+  });
 });
+
