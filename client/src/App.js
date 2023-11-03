@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import SearchBooks from "./pages/SearchBooks";
 import SavedBooks from "./pages/SavedBooks";
 
@@ -10,14 +10,12 @@ function App() {
     <Router>
       <div>
         <Nav />
-        <Switch>
-          <Route exact path={["/"]}>
-            <SearchBooks />
+        <Routes>
+          <Route exact path="/" element={<SearchBooks />}>
           </Route>
-          <Route exact path="/savedbooks">
-            <SavedBooks />
+          <Route exact path="/savedbooks" element={<SavedBooks />}>
           </Route>
-        </Switch>
+        </Routes>
       </div>
     </Router>
   );

@@ -5,7 +5,7 @@ import API from "../utils/API";
   // Then reload books from the database
   function saveBook(bookData) {
 
-    console.log(`book data - ${JSON.stringify(bookData)}`)
+    //console.log(`book data - ${JSON.stringify(bookData)}`)
 
     API.saveBook({
         title: bookData.title,

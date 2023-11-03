@@ -27,7 +27,14 @@ function SavedBooks() {
   }
 
   const savedBooksList = books.map((book, index) => 
-    <li key={index}>{book.title}<a className="view-btn" href={book.link} target="_blank" rel="noopener noreferrer">View</a> <button className="delete-btn btn btn-danger" onClick={() => deleteBook(book._id)}>Delete</button></li>
+    <li key={index}>
+        <a className="view-btn" href={book.link} target="_blank" rel="noopener noreferrer">
+        {book.title}
+        </a> 
+      <span className="column-align">
+        <button className="delete-btn btn btn-danger" onClick={() => deleteBook(book._id)}>Delete</button>
+      </span>
+    </li>
   );
 
     return (

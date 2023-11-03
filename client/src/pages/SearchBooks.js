@@ -61,4 +61,10 @@ function SearchBooks() {
   }
 
 
-export default SearchBooks;
+  export default function App() {
+    return (
+      <>
+        <SearchBooks/>
+      </>
+    );
+  }
