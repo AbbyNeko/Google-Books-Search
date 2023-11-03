@@ -4,15 +4,13 @@
   "private": true,
   "proxy": "http://localhost:3002/",
   "dependencies": {
-    "@babel/plugin-transform-private-property-in-object": "^7.22.11",
     "@testing-library/jest-dom": "^6.1.4",
     "@testing-library/react": "^14.0.0",
     "@testing-library/user-event": "^14.5.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.18.0",
-    "react-scripts": "5.0.1",
-    "@babel/plugin-proposal-private-property-in-object": "^7.22.11"
+    "react-scripts": "5.0.1"
   },
   "engines": {
     "node": "20.9.0"
@@ -37,5 +35,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-private-property-in-object": "^7.22.11"
   }
 }
