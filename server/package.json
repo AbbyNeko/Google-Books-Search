@@ -8,6 +8,10 @@
     "watch": "nodemon",
     "seed": "node seeders/seed.js"
   },
+  "engines": {
+    "node": "20.9.0",
+    "npm": "10.2.3"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
