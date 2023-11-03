@@ -35,8 +35,14 @@ form {
   margin-bottom:3em;
 }
 
-.saved-books-list {
-  margin-top:2em;
+.saved-books-list li {
+  margin-top:1.2em;
+}
+
+li > .column-align {
+  position: absolute;
+  left: 50%;
+  height: 50px;
 }
 
 .view-btn {
