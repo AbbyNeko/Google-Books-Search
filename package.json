@@ -33,9 +33,10 @@
     "dotenv": "^16.3.2",
     "express": "^4.21.2",
     "if-env": "^1.0.4",
-    "nodemon": "^3.0.3",
     "mongoose": "^8.14.0",
-    "react-scripts": "^5.0.1"
+    "nodemon": "^3.0.3",
+    "react-scripts": "^3.0.1",
+    "serve": "^14.2.4"
   },
   "devDependencies": {
     "@babel/plugin-transform-private-property-in-object": "^7.22.11",
